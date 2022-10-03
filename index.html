@@ -34,7 +34,17 @@
         </div>
         <div class="grandbaniere">
             <div class="baniere">
-                <!-- <button></button> -->
+                <div class="play_btn">
+                    <img src="images_site/580b57fcd9996e24bc43c4f9.png" id="play_bouton" onclick="demarrage('images_site/IMG_9578_1.mp4')">
+                </div>
+                <img src="images_site/9.jpg" style="filter: blur(4px)" >
+                <div class="play_video" id="played_video">
+                    <video width="100%" controls autoplay>
+                        <source src="images_site/IMG_9578_1.mp4" type = "video/mp4">
+                    </video>
+                    <div class="my_video" id="close_btn">
+                    <i class="fa-solid fa-circle-xmark" onclick="fermeture()"></i></div>
+                </div>
             </div>
             <div class="corps">
                 <div class="reseauSociaux">
@@ -66,5 +76,16 @@
 
     </footer>
 </body>
+<script>
+    var play_video = document.getElementById('played_video')
+    var close_btn = document.getElementById('close_btn')
+    function demarrage(file){
+        close_btn.src = file
+        play_video.style.display = "block"
+    }
+    function fermeture(){
+        play_video.style.display="none"
+    }
+</script>
 <script src="https://kit.fontawesome.com/e655e9ff73.js" crossorigin="anonymous"></script>
 </html>
