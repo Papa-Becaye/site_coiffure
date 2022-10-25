@@ -17,10 +17,8 @@ body{
     background-color: #E53935;
 }
 .contenuhaut{
-    width: 90%;
+    width: 100%;
     height: 100%;
-    margin-left: 5%;
-    margin-right: 5%;
 }
 .logo img{
     width: 100%;
@@ -29,19 +27,15 @@ body{
 }
 .barhaut{
     display: flex;
-    width: 90%;
+    width: 100%;
     height: 100%;
-    margin-left: 5%;
-    margin-right: 5%;
 
 }
 /* ==============Debut barre de recherche=============== */
 .barhaut .searchbar{
-    transform: translateX(74vh);
-    display: flex;
+    margin-left: 100px;
 }
 .barhaut input{
-    margin-left: -25px;
     width: 220px;
     outline: none;
     height: 25px;
@@ -56,7 +50,8 @@ body{
 .barhaut .searchbar .item_search{
     color: #E53935;
     margin-top: 7px;
-    z-index: 1;
+    display: block;
+    float: right;
 }
 /* ==============Fin barre de recherche=============== */
 .logo{
@@ -98,13 +93,13 @@ ul li i{
     width: 100%;
     background-image: url('../images_site/home-ribbon-marine.png');
     font-family: 'Poppins', sans-serif;
+    background-color: #E53935;
 }
 .grandbaniere{
-    width: 90%;
+    width: 100%;
     height: 100%;
     margin-top: 20px;
     margin-left: 5%;
-    margin-right: 5%;
 }
 .baniere{
     display: flex;
@@ -208,4 +203,28 @@ ul li i{
     background-color: #ffffff;
     box-shadow:0px 0px 8px #0b0a3d;
     margin-bottom: 10px;
+}
+@media screen and (max-width:590px){
+    .barhaut .searchbar{
+        display: auto;
+        margin-left: 12%;
+    }
+    .barhaut input{
+        position: absolute;
+        width: 100px;
+        outline: none;
+        height: 25px;
+        border: none;
+        border-radius: 15px;
+        color: #0b0a3d;
+        padding-right: 10px;
+        font-family: 'Poppins', sans-serif;
+    }
+    .barhaut .searchbar .item_search{
+        color: #E53935;
+        margin-top: 7px;
+        position: fixed;
+        margin-left: 5px;
+        z-index: 1;
+    }
 }
